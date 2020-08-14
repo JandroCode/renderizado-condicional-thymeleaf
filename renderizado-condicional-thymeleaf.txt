@@ -1,0 +1,26 @@
+	<table>
+		
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Estado</th>
+			</tr>
+			
+		</thead>
+		
+		<tbody>
+			<tr th:each="item : ${tgruposList}">
+				<td th:text="${item.sTGrupo_desc}"></td>
+				<td>
+				
+					<span th:if="${item.iTGrupo_fl == 1}" class="badge badge-success" >ACTIVO</span>
+					<span th:unless="${item.iTGrupo_fl == 1}" class="badge badge-danger" >INACTIVO</span>
+				
+				</td>
+			
+			</tr>
+		
+		</tbody>
+		
+	
+	</table>
